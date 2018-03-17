@@ -2,9 +2,9 @@ version: 0.0
 os: linux
 hooks:
   BeforeInstall:
-    - location: scripts/alertCreator
+    - location: scripts/alertCreator.py
       timeout: 300
       runas: root
-    - location: scripts/alertSender
+    - location: scripts/alertSender.py
       timeout: 300
       runas: root
