@@ -2,7 +2,7 @@
 
 import pymongo
 from pymongo import MongoClient
-from pyspark.sql import SparkSession
+#from pyspark.sql import SparkSession
 import socket
 import subprocess
 import os 
@@ -19,12 +19,12 @@ newSensorDict ={}
 sensorsAlreadySeen = set(databaseSensors)
 
 # Spark application name
-application_name = 'AlertDetector&Sender'
+#application_name = 'AlertDetector&Sender'
 #Start the spark session and initial application
-spark = SparkSession\
-    .builder\
-    .appName(application_name)\
-    .getOrCreate()
+#spark = SparkSession\
+#    .builder\
+#    .appName(application_name)\
+#    .getOrCreate()
 
 client = pymongo.MongoClient("mongodb://admin:admin@cluster0-shard-00-00-xowtx.mongodb.net:27017,cluster0-shard-00-01-xowtx.mongodb.net:27017,cluster0-shard-00-02-xowtx.mongodb.net:27017/admin?replicaSet=Cluster0-shard-0&ssl=true")
 db = client.System
@@ -115,4 +115,4 @@ while (1):
 				#print ("10) after checking for danger" + key.decode("utf-8","ignore"))
 alertFile.close()
 client.close()
-spark.stop()
+#spark.stop()
