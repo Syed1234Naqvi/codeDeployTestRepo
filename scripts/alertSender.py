@@ -3,7 +3,7 @@ import os
 import subprocess
 
 filename = 'alertsRecords.txt'
-TCP_IP = '127.0.1.1'
+TCP_IP = '0.0.0.0'
 TCP_PORT = 5005
 BUFFER_SIZE = 20  # Normally 1024, but we want fast response
 
