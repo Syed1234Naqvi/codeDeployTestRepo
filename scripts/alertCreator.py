@@ -1,3 +1,5 @@
+#!/usr/bin/python
+
 import pymongo
 from pymongo import MongoClient
 from pyspark.sql import SparkSession
